@@ -1,0 +1,52 @@
+<div class="container">
+    <h1 class="mt-4 mb-3">Employee
+        <small>Add New Employees</small>
+      </h1>
+
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="/">Home</a>
+        </li>
+        <li class="breadcrumb-item active">Add Employee</li>
+      </ol>
+
+      <div class="row">
+        <div class="col-md-6">
+            <form #form="ngForm" (ngSubmit)="addEmployee()">
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="text" class="form-control" name="name" id="name" [(ngModel)]="addEmployeeRequest.name" aria-describedby="nameId" placeholder="Your name">
+                  <small id="nameId" class="form-text text-muted">Enter your full name</small>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" class="form-control" name="email" id="email" [(ngModel)]="addEmployeeRequest.email" aria-describedby="emailId" placeholder="Your email address">
+                  <small id="emailId" class="form-text text-muted">Enter your email address</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="number" class="form-control" name="phone" id="phone" [(ngModel)]="addEmployeeRequest.phone" aria-describedby="phoneId" placeholder="Your phone number">
+                    <small id="phoneId" class="form-text text-muted">Enter your phone</small>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="salary">Salary</label>
+                    <input type="number" class="form-control" name="salary" id="salary" [(ngModel)]="addEmployeeRequest.salary" aria-describedby="salaryId" placeholder="Your salary">
+                    <small id="salaryId" class="form-text text-muted">Enter your salary amount</small>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="department">Department</label>
+                    <input type="text" class="form-control" name="department" id="department" [(ngModel)]="addEmployeeRequest.department" aria-describedby="departmentId" placeholder="Your deparment">
+                    <small id="departmentId" class="form-text text-muted">Enter your department name</small>
+                  </div>
+
+                  <button type="submit" class="btn btn-primary btn-block">Save</button>
+      
+            </form>
+        </div>
+      </div>
+
+
+</div>
